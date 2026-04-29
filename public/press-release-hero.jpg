@@ -1,0 +1,16 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFBF8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C6A5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect x="100" y="150" width="1000" height="300" rx="20" fill="#A2416B" opacity="0.1"/>
+  <rect x="150" y="200" width="900" height="200" rx="15" fill="#852747" opacity="0.15"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#A2416B">Press Release Distribution</text>
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#852747">Professional Media Outreach Platform</text>
+  <circle cx="200" cy="150" r="30" fill="#FF7777" opacity="0.6"/>
+  <circle cx="1000" cy="450" r="40" fill="#A2416B" opacity="0.4"/>
+  <circle cx="950" cy="150" r="25" fill="#F5C6A5" opacity="0.7"/>
+</svg>
