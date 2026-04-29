@@ -1,0 +1,9 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="50" rx="8" fill="#A2416B"/>
+  <path d="M15 18h4v14h-4v-14z" fill="white"/>
+  <path d="M23 18h4v14h-4v-14z" fill="white"/>
+  <path d="M31 18h4v14h-4v-14z" fill="white"/>
+  <path d="M39 18h4v14h-4v-14z" fill="white"/>
+  <path d="M47 18h4v14h-4v-14z" fill="white"/>
+  <text x="60" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Mediavoxer</text>
+</svg>

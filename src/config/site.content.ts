@@ -2,114 +2,114 @@ import type { TaskKey } from '@/lib/site-config'
 
 export const siteContent = {
   navbar: {
-    tagline: 'Independent news desk',
+    tagline: 'Media Press Release Distribution',
   },
   footer: {
-    tagline: 'Simple publishing for press-style updates',
+    tagline: 'Professional press release publishing',
   },
   hero: {
-    badge: 'Latest updates',
-    title: ['Clear publishing, simple reading, no extra noise.'],
+    badge: 'Press Releases',
+    title: ['Distribute your news to the world.', 'Professional media distribution platform.'],
     description:
-      'A minimal article-style publishing template built for regular updates, announcements, and media distribution posts.',
+      'A comprehensive press release distribution platform for businesses, organizations, and media professionals to share their news with global audiences.',
     primaryCta: {
-      label: 'Browse latest posts',
-      href: '/updates',
+      label: 'Browse Press Releases',
+      href: '/articles',
     },
     secondaryCta: {
-      label: 'Contact us',
-      href: '/contact',
+      label: 'Submit Press Release',
+      href: '/create/article',
     },
-    searchPlaceholder: 'Search posts',
+    searchPlaceholder: 'Search press releases',
     focusLabel: 'Latest',
-    featureCardBadge: 'editor note',
-    featureCardTitle: 'Recent updates appear directly on the homepage.',
+    featureCardBadge: 'featured',
+    featureCardTitle: 'Latest press releases from leading organizations.',
     featureCardDescription:
-      'The homepage works as a clean front page so new posts stay visible without decorative sections getting in the way.',
+      'Stay updated with the latest news and announcements from companies, nonprofits, and media organizations worldwide.',
   },
   home: {
     metadata: {
-      title: 'Latest updates and newsroom posts',
+      title: 'Latest Press Releases & Media Updates',
       description:
-        'Read the latest updates, announcements, and stories through a simple archive-first publishing experience.',
-      openGraphTitle: 'Latest updates and newsroom posts',
+        'Discover the latest press releases, company announcements, and media updates from organizations worldwide through our professional distribution platform.',
+      openGraphTitle: 'Latest Press Releases & Media Updates',
       openGraphDescription:
-        'A simple publishing template for updates, announcements, and readable article pages.',
-      keywords: ['newsroom posts', 'latest updates', 'announcements', 'press articles'],
+        'Professional press release distribution platform for businesses, organizations, and media professionals to share their news globally.',
+      keywords: ['press releases', 'media distribution', 'company announcements', 'news updates', 'public relations'],
     },
     introBadge: 'About',
-    introTitle: 'A quiet publishing template made for regular updates.',
+    introTitle: 'Professional press release distribution platform.',
     introParagraphs: [
-      'This template is designed for sites that publish straightforward updates and want the homepage to behave like a clean front page rather than a product landing page.',
-      'Posts are visible immediately, archives stay easy to scan, and the reading page keeps the focus on the article itself.',
-      'The interface is intentionally simple so the site feels usable, familiar, and fast to update.',
+      'Mediavoxer is designed for organizations that need to distribute press releases and media announcements to global audiences efficiently.',
+      'Press releases are published immediately, archives remain searchable, and the reading experience prioritizes clarity and professionalism.',
+      'The platform is built for media professionals, journalists, and organizations who need reliable news distribution.',
     ],
-    sideBadge: 'What it prioritizes',
+    sideBadge: 'Platform features',
     sidePoints: [
-      'Recent posts directly on the homepage.',
-      'Simple archive layout with sidebar search and recent items.',
-      'Readable article pages without comments or extra modules.',
-      'A publishing-first structure that stays easy to maintain.',
+      'Latest press releases featured on homepage.',
+      'Advanced search and filtering by category and date.',
+      'Professional reading experience optimized for media.',
+      'Global distribution network for maximum reach.',
     ],
     primaryLink: {
-      label: 'Open archive',
-      href: '/updates',
+      label: 'Browse Press Releases',
+      href: '/articles',
     },
     secondaryLink: {
-      label: 'Contact desk',
-      href: '/contact',
+      label: 'Submit Release',
+      href: '/create/article',
     },
   },
   cta: {
-    badge: 'Get in touch',
-    title: 'Use this template when publishing regular updates matters more than visual effects.',
+    badge: 'Distribution Services',
+    title: 'Professional press release distribution for maximum impact.',
     description:
-      'A straightforward layout for announcements, media coverage, partner updates, and newsroom-style content.',
+      'Reach journalists, media outlets, and global audiences with our comprehensive press release distribution platform designed for modern media professionals.',
     primaryCta: {
-      label: 'Contact us',
-      href: '/contact',
+      label: 'Submit Press Release',
+      href: '/create/article',
     },
     secondaryCta: {
-      label: 'View archive',
-      href: '/updates',
+      label: 'View Archive',
+      href: '/articles',
     },
   },
-  taskSectionHeading: 'Latest posts',
-  taskSectionDescriptionSuffix: 'Read the newest published updates.',
+  taskSectionHeading: 'Latest Press Releases',
+  taskSectionDescriptionSuffix: 'Discover the newest media updates and announcements.',
 } as const
 
 export const taskPageMetadata: Record<Exclude<TaskKey, 'comment' | 'org' | 'social'>, { title: string; description: string }> = {
   article: {
-    title: 'Articles',
-    description: 'Read the latest posts and long-form updates.',
+    title: 'Press Releases',
+    description: 'Read the latest press releases and media announcements.',
   },
   listing: {
-    title: 'Listings',
-    description: 'Explore listings and directory-style entries.',
+    title: 'Media Directory',
+    description: 'Explore media contacts and organization listings.',
   },
   classified: {
-    title: 'Classifieds',
-    description: 'Browse classifieds and short-form notices.',
+    title: 'Media Opportunities',
+    description: 'Browse media opportunities and partnership notices.',
   },
   image: {
-    title: 'Images',
-    description: 'Browse image-led updates and visual posts.',
+    title: 'Media Gallery',
+    description: 'Browse media images and visual press content.',
   },
   profile: {
-    title: 'Profiles',
-    description: 'View profile pages and public identities.',
+    title: 'Media Profiles',
+    description: 'View media professional profiles and organization pages.',
   },
   sbm: {
-    title: 'Bookmarks',
-    description: 'Browse curated resources and saved links.',
+    title: 'Media Resources',
+    description: 'Browse curated media resources and industry links.',
   },
   pdf: {
-    title: 'Resources',
-    description: 'Open PDFs and downloadable files.',
+    title: 'Media Kits',
+    description: 'Download media kits and press materials.',
   },
   mediaDistribution: {
-    title: 'Latest updates',
-    description: 'Read the latest published updates and announcements.',
+    title: 'Press Releases',
+    description: 'Read the latest press releases and media announcements.',
   },
 }
 
@@ -117,25 +117,25 @@ export const taskIntroCopy: Record<
   TaskKey,
   { title: string; paragraphs: string[]; links: { label: string; href: string }[] }
 > = {
-  listing: { title: 'Listings', paragraphs: ['Directory entries and service pages.'], links: [{ label: 'Home', href: '/' }] },
-  article: { title: 'Articles', paragraphs: ['General long-form article feed.'], links: [{ label: 'Home', href: '/' }] },
-  classified: { title: 'Classifieds', paragraphs: ['Short-form posts and notices.'], links: [{ label: 'Home', href: '/' }] },
-  image: { title: 'Images', paragraphs: ['Image-first posts and galleries.'], links: [{ label: 'Home', href: '/' }] },
-  profile: { title: 'Profiles', paragraphs: ['Profile pages and identity surfaces.'], links: [{ label: 'Home', href: '/' }] },
-  sbm: { title: 'Bookmarks', paragraphs: ['Curated saved links and references.'], links: [{ label: 'Home', href: '/' }] },
-  pdf: { title: 'Resources', paragraphs: ['Downloadable files and documents.'], links: [{ label: 'Home', href: '/' }] },
-  social: { title: 'Social', paragraphs: ['Short updates and activity.'], links: [{ label: 'Home', href: '/' }] },
-  comment: { title: 'Comments', paragraphs: ['Commentary and response posts.'], links: [{ label: 'Home', href: '/' }] },
-  org: { title: 'Organizations', paragraphs: ['Organization pages and entities.'], links: [{ label: 'Home', href: '/' }] },
+  listing: { title: 'Media Directory', paragraphs: ['Media contacts, organizations, and service listings for press professionals.'], links: [{ label: 'Home', href: '/' }] },
+  article: { title: 'Press Releases', paragraphs: ['Official press releases and media announcements from organizations worldwide.'], links: [{ label: 'Home', href: '/' }] },
+  classified: { title: 'Media Opportunities', paragraphs: ['Media opportunities, partnerships, and collaboration notices.'], links: [{ label: 'Home', href: '/' }] },
+  image: { title: 'Media Gallery', paragraphs: ['Visual media content, press photos, and image galleries.'], links: [{ label: 'Home', href: '/' }] },
+  profile: { title: 'Media Profiles', paragraphs: ['Professional media profiles and organization contact information.'], links: [{ label: 'Home', href: '/' }] },
+  sbm: { title: 'Media Resources', paragraphs: ['Curated media resources, industry links, and reference materials.'], links: [{ label: 'Home', href: '/' }] },
+  pdf: { title: 'Media Kits', paragraphs: ['Downloadable media kits, press materials, and official documents.'], links: [{ label: 'Home', href: '/' }] },
+  social: { title: 'Media Updates', paragraphs: ['Quick media updates and social announcements.'], links: [{ label: 'Home', href: '/' }] },
+  comment: { title: 'Media Commentary', paragraphs: ['Industry commentary and expert responses.'], links: [{ label: 'Home', href: '/' }] },
+  org: { title: 'Media Organizations', paragraphs: ['Media organization profiles and contact directories.'], links: [{ label: 'Home', href: '/' }] },
   mediaDistribution: {
-    title: 'Latest updates',
+    title: 'Press Releases',
     paragraphs: [
-      'This archive is designed for straightforward publishing: regular updates, announcements, and media-style posts presented in a clean reading format.',
-      'The layout stays simple so visitors can scan headlines quickly, open stories easily, and move through the archive without distraction.',
+      'This archive is designed for professional media distribution: press releases, announcements, and official communications presented in a clean, journalist-friendly format.',
+      'The layout prioritizes readability and quick scanning so media professionals can find relevant stories efficiently and access contact information easily.',
     ],
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Submit Release', href: '/create/article' },
     ],
   },
 }
