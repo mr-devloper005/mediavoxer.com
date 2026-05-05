@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Check, Star, ArrowRight, HelpCircle, Zap, Globe, BarChart3, Users, FileText, Shield, Mail, Phone } from 'lucide-react'
+import { Check, Star, ArrowRight, HelpCircle, Mail } from 'lucide-react'
 import { NavbarShell } from '@/components/shared/navbar-shell'
 import { Footer } from '@/components/shared/footer'
 import { buildPageMetadata } from '@/lib/seo'
-import { siteContent } from '@/config/site.content'
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
@@ -134,177 +133,220 @@ const faqs = [
   },
   {
     question: 'Can I cancel my subscription?',
-    answer: 'Yes, you can cancel your subscription at any time. Your service will continue until the end of your current billing period, and you won\'t be charged again. No cancellation fees apply.',
+    answer: "Yes, you can cancel your subscription at any time. Your service will continue until the end of your current billing period, and you won't be charged again. No cancellation fees apply.",
   },
   {
     question: 'Do you provide writing services?',
-    answer: 'While we don\'t include press release writing in our standard plans, we can connect you with professional writers through our Enterprise plan or as an add-on service. Contact us for more information.',
+    answer: "While we don't include press release writing in our standard plans, we can connect you with professional writers through our Enterprise plan or as an add-on service. Contact us for more information.",
   },
 ]
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#FFFBF8]">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <NavbarShell />
-      
-      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+
+      <main>
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#A2416B]/25 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#852747] mb-6">
-            <Star className="h-3.5 w-3.5" />
-            Pricing Plans
+        <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600 backdrop-blur">
+              <Star className="h-3.5 w-3.5" />
+              Pricing Plans
+            </div>
+            <h1 className="mb-6 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Choose your{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                distribution plan
+              </span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
+              Professional media distribution plans designed for businesses of all sizes.
+              From startups to enterprises, we have the right solution for your PR needs.
+            </p>
           </div>
-          <h1 className="text-4xl font-bold tracking-[-0.04em] text-[#852747] sm:text-5xl lg:text-6xl mb-6">
-            Choose your press release distribution plan
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-[#852747]/80 leading-8">
-            Professional media distribution plans designed for businesses of all sizes. 
-            From startups to enterprises, we have the right solution for your PR needs.
-          </p>
-        </div>
+        </section>
 
         {/* Pricing Cards */}
-        <div className="grid gap-8 lg:grid-cols-3 mb-20">
-          {pricingPlans.map((plan, index) => (
-            <div
-              key={plan.name}
-              className={`relative rounded-2xl border bg-white p-8 shadow-lg transition-all hover:shadow-xl ${
-                plan.popular
-                  ? 'border-[#A2416B] ring-2 ring-[#A2416B]/20 scale-105'
-                  : 'border-[#A2416B]/20'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="inline-flex items-center gap-1 rounded-full bg-[#A2416B] px-3 py-1 text-xs font-semibold text-white">
-                    <Star className="h-3 w-3" />
-                    Most Popular
-                  </div>
-                </div>
-              )}
-              
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-[#852747] mb-2">{plan.name}</h3>
-                <p className="text-[#852747]/70 mb-6">{plan.description}</p>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-[#A2416B]">{plan.price}</span>
-                  <span className="text-[#852747]/70 ml-2">{plan.period}</span>
-                </div>
-              </div>
-
-              <div className="space-y-4 mb-8">
-                {plan.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-[#A2416B] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-[#852747]">{feature}</span>
-                  </div>
-                ))}
-                {plan.excluded.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 opacity-50">
-                    <div className="h-5 w-5 mt-0.5 flex-shrink-0 flex items-center justify-center">
-                      <div className="h-1 w-3 bg-[#852747]/30 rounded-full" />
+        <section className="px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-3">
+              {pricingPlans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`relative rounded-2xl border bg-white p-8 shadow-lg transition-all hover:shadow-xl ${
+                    plan.popular
+                      ? 'border-blue-500 ring-2 ring-blue-500/20 scale-105'
+                      : 'border-slate-200'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-1.5 text-xs font-bold text-white shadow-md">
+                        <Star className="h-3 w-3" />
+                        Most Popular
+                      </div>
                     </div>
-                    <span className="text-sm text-[#852747]/50">{feature}</span>
-                  </div>
-                ))}
-              </div>
+                  )}
 
-              <Link
-                href={plan.ctaHref}
-                className={`block w-full text-center rounded-full px-6 py-3 font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-[#A2416B] text-white hover:bg-[#852747]'
-                    : 'border border-[#A2416B]/20 bg-white text-[#852747] hover:bg-[#F5C6A5]/30'
-                }`}
-              >
-                {plan.cta}
-              </Link>
+                  <div className="mb-8">
+                    <h3 className="mb-2 text-2xl font-bold text-slate-900">{plan.name}</h3>
+                    <p className="mb-6 text-slate-500">{plan.description}</p>
+                    <div className="flex items-baseline gap-2">
+                      <span
+                        className={`text-4xl font-black ${
+                          plan.popular
+                            ? 'bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'
+                            : 'text-slate-900'
+                        }`}
+                      >
+                        {plan.price}
+                      </span>
+                      <span className="text-slate-500">{plan.period}</span>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 space-y-3">
+                    {plan.features.map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                          <Check className="h-3 w-3 text-blue-600" />
+                        </div>
+                        <span className="text-sm text-slate-700">{feature}</span>
+                      </div>
+                    ))}
+                    {plan.excluded.map((feature) => (
+                      <div key={feature} className="flex items-start gap-3 opacity-40">
+                        <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center">
+                          <div className="h-px w-3 rounded-full bg-slate-400" />
+                        </div>
+                        <span className="text-sm text-slate-500">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    href={plan.ctaHref}
+                    className={`block w-full rounded-xl px-6 py-3 text-center font-bold transition-all ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg'
+                        : 'border-2 border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50'
+                    }`}
+                  >
+                    {plan.cta}
+                  </Link>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         {/* Add-ons Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#852747] mb-4">Enhance Your Plan</h2>
-            <p className="text-lg text-[#852747]/80 max-w-2xl mx-auto">
-              Add powerful features to your press release distribution with our premium add-ons
-            </p>
-          </div>
-          
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {addOns.map((addOn) => (
-              <div key={addOn.name} className="rounded-xl border border-[#A2416B]/20 bg-white p-6">
-                <h3 className="text-xl font-semibold text-[#852747] mb-2">{addOn.name}</h3>
-                <p className="text-[#852747]/70 mb-4">{addOn.description}</p>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-2xl font-bold text-[#A2416B]">{addOn.price}</span>
-                  <span className="text-[#852747]/70 ml-2">{addOn.period}</span>
+        <section className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-black text-slate-900 sm:text-4xl">
+                Enhance Your{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Plan
+                </span>
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-slate-600">
+                Add powerful features to your press release distribution with our premium add-ons
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {addOns.map((addOn) => (
+                <div
+                  key={addOn.name}
+                  className="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-blue-50 p-6 transition-all hover:border-blue-300 hover:shadow-lg"
+                >
+                  <h3 className="mb-2 text-xl font-bold text-slate-900">{addOn.name}</h3>
+                  <p className="mb-4 text-slate-500">{addOn.description}</p>
+                  <div className="mb-4 flex items-baseline gap-2">
+                    <span className="text-2xl font-black text-blue-600">{addOn.price}</span>
+                    <span className="text-slate-500">{addOn.period}</span>
+                  </div>
+                  <ul className="space-y-2">
+                    {addOn.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-sm text-slate-600">
+                        <Check className="h-4 w-4 text-blue-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="space-y-2">
-                  {addOn.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-[#852747]/80">
-                      <Check className="h-4 w-4 text-[#A2416B]" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* FAQ Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#852747] mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-[#852747]/80">
-              Everything you need to know about our pricing and services
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
+        <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-black text-slate-900 sm:text-4xl">
+                Frequently Asked{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Questions
+                </span>
+              </h2>
+              <p className="text-lg text-slate-600">
+                Everything you need to know about our pricing and services
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-3xl space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-[#A2416B]/20 rounded-xl bg-white p-6">
+                <div
+                  key={index}
+                  className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-blue-200 hover:shadow-md"
+                >
                   <div className="flex items-start gap-4">
-                    <HelpCircle className="h-5 w-5 text-[#A2416B] mt-0.5 flex-shrink-0" />
+                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <HelpCircle className="h-3.5 w-3.5 text-blue-600" />
+                    </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-[#852747] mb-2">{faq.question}</h3>
-                      <p className="text-[#852747]/70 leading-7">{faq.answer}</p>
+                      <h3 className="mb-2 text-lg font-bold text-slate-900">{faq.question}</h3>
+                      <p className="leading-relaxed text-slate-600">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-[#A2416B]/10 to-[#F5C6A5]/10 rounded-2xl p-12 border border-[#A2416B]/20">
-          <h2 className="text-3xl font-bold text-[#852747] mb-4">
-            Ready to distribute your press releases?
-          </h2>
-          <p className="text-lg text-[#852747]/80 mb-8 max-w-2xl mx-auto">
-            Join thousands of organizations that trust Mediavoxer for their media distribution needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/register"
-              className="inline-flex items-center gap-2 rounded-full bg-[#A2416B] px-6 py-3 text-white font-semibold hover:bg-[#852747] transition-colors"
-            >
-              Get Started Now
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-[#A2416B]/20 bg-white px-6 py-3 text-[#852747] font-semibold hover:bg-[#F5C6A5]/30 transition-colors"
-            >
-              Contact Sales
-              <Mail className="h-4 w-4" />
-            </Link>
+        <section className="px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-12 text-center shadow-2xl">
+              <h2 className="mb-4 text-3xl font-black text-white sm:text-4xl">
+                Ready to distribute your press releases?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-lg text-blue-100">
+                Join thousands of organizations that trust Mediavoxer for their media distribution needs
+              </p>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Link
+                  href="/register"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-blue-600 shadow-lg transition-all hover:bg-blue-50 hover:shadow-xl"
+                >
+                  Get Started Now
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur transition-all hover:bg-white/20"
+                >
+                  Contact Sales
+                  <Mail className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />

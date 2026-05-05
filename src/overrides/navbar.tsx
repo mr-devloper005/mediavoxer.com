@@ -1,40 +1,142 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { Search, Menu, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { SITE_CONFIG } from '@/lib/site-config'
+import { siteContent } from '@/config/site.content'
+import { cn } from '@/lib/utils'
 
 export const NAVBAR_OVERRIDE_ENABLED = true
 
-const utilityLinks = [
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Latest News', href: '/updates' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'About Us', href: '/about' },
-  { label: 'Terms of Service', href: '/terms' },
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function NavbarOverride() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+
   return (
-    <header className="border-b border-neutral-200 bg-white text-neutral-800">
-      <div className="border-b border-neutral-200 bg-neutral-50">
-        <div className="mx-auto flex max-w-6xl flex-wrap gap-x-4 gap-y-1 px-4 py-3 text-[13px] sm:px-6">
-          {utilityLinks.map((item) => (
-            <Link key={item.label} href={item.href} className="hover:text-black">{item.label}</Link>
-          ))}
-        </div>
-      </div>
-      <div className="mx-auto max-w-6xl px-4 py-8 text-center sm:px-6">
-        <Link href="/" className="text-5xl font-black uppercase tracking-[0.18em] text-black sm:text-6xl" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
-          {SITE_CONFIG.name}
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
+      <nav className="mx-auto flex h-[68px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+
+        {/* Logo + name + tagline */}
+        <Link href="/" className="flex shrink-0 items-center whitespace-nowrap">
+          <div className="hidden sm:block">
+            <span className="block text-[15px] font-bold leading-tight text-gray-900">
+              {SITE_CONFIG.name}
+            </span>
+            <span className="block text-[9px] uppercase tracking-[0.22em] text-gray-400">
+              {siteContent.navbar.tagline}
+            </span>
+          </div>
+          <span className="block text-[15px] font-bold leading-tight text-gray-900 sm:hidden">
+            {SITE_CONFIG.name}
+          </span>
         </Link>
-      </div>
-      <div className="border-t border-neutral-200">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-6 px-4 py-4 text-sm uppercase tracking-[0.08em] sm:px-6">
-          <Link href="/" className="text-[#4a90ff]">Home</Link>
-          <Link href="/contact" className="hover:text-black">Contact</Link>
-          <Link href="/search" className="hover:text-black"><Search className="h-4 w-4" /></Link>
+
+        {/* Center nav links */}
+        <div className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+          {navLinks.map((link) => {
+            const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  'px-4 py-2 text-sm font-medium transition-colors',
+                  isActive ? 'text-gray-900' : 'text-gray-500 hover:text-gray-900'
+                )}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
         </div>
-      </div>
+
+        {/* Right: search + CTA */}
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="hidden rounded-full text-gray-500 hover:text-gray-900 md:flex"
+          >
+            <Link href="/search">
+              <Search className="h-5 w-5" />
+              <span className="sr-only">Search</span>
+            </Link>
+          </Button>
+
+          <Button
+            size="sm"
+            asChild
+            className="hidden rounded-full bg-[#6B4EFF] px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#5a3ee0] md:inline-flex"
+          >
+            <Link href="/contact">Submit Release</Link>
+          </Button>
+
+          {/* Mobile hamburger */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full text-gray-600 lg:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="border-t border-gray-200 bg-white">
+          <div className="space-y-1 px-4 py-3">
+            <Link
+              href="/search"
+              onClick={() => setMobileOpen(false)}
+              className="mb-2 flex items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-medium text-gray-500"
+            >
+              <Search className="h-4 w-4" />
+              Search the site
+            </Link>
+            {navLinks.map((link) => {
+              const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={cn(
+                    'flex items-center rounded-xl px-4 py-3 text-sm font-medium transition-colors',
+                    isActive ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
+            <div className="pt-2">
+              <Button
+                size="sm"
+                asChild
+                className="w-full rounded-full bg-[#6B4EFF] text-white hover:bg-[#5a3ee0]"
+              >
+                <Link href="/contact" onClick={() => setMobileOpen(false)}>
+                  Submit Release
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
