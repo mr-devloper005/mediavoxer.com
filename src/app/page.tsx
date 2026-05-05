@@ -599,7 +599,8 @@ function EditorialHome({
         </section>
 
         {/* Services Section - New Component */}
-        <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32 bg-white">
+        <section className="bg-white py-20 sm:py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-sans text-4xl font-black leading-tight text-slate-900 sm:text-5xl mb-4">
               Distribution
@@ -620,7 +621,7 @@ function EditorialHome({
               <p className="text-slate-600 leading-relaxed mb-6">
                 Distribute your press releases to thousands of media outlets worldwide with our global network.
               </p>
-              <Link href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
+              <Link href="/about" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
                 Learn More
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -633,7 +634,7 @@ function EditorialHome({
               <p className="text-slate-600 leading-relaxed mb-6">
                 Get premium placement on major news sites and industry publications with verified distribution.
               </p>
-              <Link href="#" className="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-700">
+              <Link href="/about" className="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-700">
                 Learn More
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -646,17 +647,19 @@ function EditorialHome({
               <p className="text-slate-600 leading-relaxed mb-6">
                 Track your press release performance with detailed analytics and real-time insights.
               </p>
-              <Link href="#" className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700">
+              <Link href="/about" className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700">
                 Learn More
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
+          </div>
         </section>
 
         {/* Featured Press Release - Redesigned */}
         {lead ? (
-          <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
+          <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-sans text-4xl font-black leading-tight text-slate-900 sm:text-5xl mb-4">
                 Featured
@@ -702,12 +705,14 @@ function EditorialHome({
                 </div>
               </Link>
             </div>
+            </div>
           </section>
         ) : null}
 
         {/* Recent Press Releases - New Grid Layout */}
         {spotlightPosts.length ? (
-          <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32 bg-white">
+          <section className="bg-white py-20 sm:py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-sans text-4xl font-black leading-tight text-slate-900 sm:text-5xl mb-4">
                 Recent
@@ -747,11 +752,13 @@ function EditorialHome({
                 </Link>
               ))}
             </div>
+            </div>
           </section>
         ) : null}
 
         {/* Trust Section - New Component */}
-        <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32 bg-gradient-to-br from-blue-600 to-indigo-600">
+        <section className="bg-gradient-to-br from-blue-600 to-indigo-600 py-20 sm:py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-sans text-4xl font-black leading-tight text-white sm:text-5xl mb-4">
               Trusted by
@@ -781,10 +788,12 @@ function EditorialHome({
               <div className="text-sm font-medium text-blue-100">Media Impressions</div>
             </div>
           </div>
+          </div>
         </section>
 
         {/* CTA Section - Redesigned */}
-        <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32 bg-gradient-to-br from-slate-900 to-slate-800">
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 sm:py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-sans text-4xl font-black leading-tight text-white sm:text-5xl mb-6">
               Ready to Amplify Your Message?
@@ -795,18 +804,19 @@ function EditorialHome({
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-500 px-10 py-5 text-slate-900 font-black hover:from-yellow-500 hover:to-orange-600 transition-all shadow-2xl hover:shadow-3xl text-lg"
+                className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-10 py-5 text-white font-black hover:from-blue-700 hover:to-indigo-700 transition-all shadow-2xl hover:shadow-3xl text-lg"
               >
                 Get Started Now
                 <ArrowRight className="h-6 w-6" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-xl border-2 border-slate-600 bg-transparent px-10 py-5 text-white font-bold hover:border-slate-500 hover:bg-slate-800 transition-all text-lg"
+                className="inline-flex items-center gap-3 rounded-xl border-2 border-white/30 bg-white/10 px-10 py-5 text-white font-bold hover:bg-white/20 hover:border-white/50 transition-all text-lg"
               >
                 Schedule Demo
               </Link>
             </div>
+          </div>
           </div>
         </section>
       </div>
