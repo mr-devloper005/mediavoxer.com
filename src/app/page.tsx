@@ -568,12 +568,6 @@ function EditorialHome({
                     Start Distribution
                     <ArrowRight className="h-5 w-5" />
                   </Link>
-                  <Link
-                    href="/pricing"
-                    className="inline-flex items-center gap-2 rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-slate-700 font-bold hover:border-slate-300 hover:bg-slate-50 transition-all"
-                  >
-                    View Plans
-                  </Link>
                 </div>
               </div>
               <div className="relative">
@@ -734,9 +728,6 @@ function EditorialHome({
                   <div className="flex items-center gap-3 mb-4">
                     <span className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-white">
                       Press Release
-                    </span>
-                    <span className="text-sm font-medium text-slate-500">
-                      {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''}
                     </span>
                   </div>
                   <h3 className="font-sans text-xl font-bold leading-tight text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">

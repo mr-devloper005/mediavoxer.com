@@ -3,7 +3,6 @@ import { NavbarShell } from "@/components/shared/navbar-shell";
 import { Footer } from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { Globe, Users, FileText, TrendingUp, Award, Target } from "lucide-react";
 
@@ -25,7 +24,6 @@ const teamMembers = [
     name: "Sarah Chen",
     role: "CEO & Founder",
     bio: "Former PR executive with 15+ years in media distribution and communications.",
-    avatar: "/placeholder.svg?height=100&width=100&text=SC",
     location: "New York, NY"
   },
   {
@@ -33,7 +31,6 @@ const teamMembers = [
     name: "Michael Rodriguez",
     role: "Head of Media Relations",
     bio: "Experienced journalist turned media strategist with deep industry connections.",
-    avatar: "/placeholder.svg?height=100&width=100&text=MR",
     location: "Los Angeles, CA"
   },
   {
@@ -41,7 +38,6 @@ const teamMembers = [
     name: "Emily Watson",
     role: "Director of Operations",
     bio: "Operations expert focused on scaling press release distribution and client success.",
-    avatar: "/placeholder.svg?height=100&width=100&text=EW",
     location: "Chicago, IL"
   }
 ];
@@ -123,15 +119,16 @@ export default function AboutPage() {
           </div>
           
           <div className="grid gap-6 md:grid-cols-3">
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, i) => (
               <div key={member.id} className="rounded-2xl border border-slate-200 bg-white p-6 transition-transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
                 <div className="flex items-center gap-4 mb-4">
-                  <Avatar className="h-16 w-16">
-                    <AvatarImage src={member.avatar} alt={member.name} />
-                    <AvatarFallback className="bg-blue-100 text-blue-600 font-semibold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
+                  <div className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white ${
+                    i === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                    i === 1 ? 'bg-gradient-to-br from-indigo-500 to-purple-600' :
+                    'bg-gradient-to-br from-purple-500 to-pink-600'
+                  }`}>
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900">{member.name}</h3>
                     <p className="text-sm text-slate-600">{member.role}</p>
@@ -153,11 +150,6 @@ export default function AboutPage() {
             Join thousands of organizations that trust Mediavoxer for their press release distribution needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg">
-              <Link href="/pricing">
-                View Pricing Plans
-              </Link>
-            </Button>
             <Button variant="outline" asChild className="border-slate-200 text-slate-700 hover:bg-slate-50 rounded-full">
               <Link href="/contact">
                 Contact Our Team
