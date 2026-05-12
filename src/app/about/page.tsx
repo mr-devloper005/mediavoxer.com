@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { NavbarShell } from "@/components/shared/navbar-shell";
 import { Footer } from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
@@ -7,14 +7,14 @@ import { SITE_CONFIG } from "@/lib/site-config";
 import { Globe, Users, FileText, TrendingUp, Award, Target } from "lucide-react";
 
 const highlights = [
-  { label: "Press Releases Distributed", value: "50k+" },
+  { label: "Release Media Distributed", value: "50k+" },
   { label: "Media Partners", value: "2,500+" },
   { label: "Companies Served", value: "12k+" },
 ];
 
 const values = [
-  { title: "Professional Distribution", description: "We connect your press releases with thousands of journalists and media outlets worldwide.", icon: Globe },
-  { title: "Media Expertise", description: "Our team understands the media landscape and helps craft compelling press releases that get noticed.", icon: FileText },
+  { title: "Professional Distribution", description: "We connect your Release Media with thousands of journalists and media outlets worldwide.", icon: Globe },
+  { title: "Media Expertise", description: "Our team understands the media landscape and helps craft compelling Release Media that get noticed.", icon: FileText },
   { title: "Global Reach", description: "From local news to international media, we ensure your story reaches the right audience.", icon: Target },
 ];
 
@@ -37,7 +37,7 @@ const teamMembers = [
     id: 3,
     name: "Emily Watson",
     role: "Director of Operations",
-    bio: "Operations expert focused on scaling press release distribution and client success.",
+    bio: "Operations expert focused on scaling Release Media distribution and client success.",
     location: "Chicago, IL"
   }
 ];
@@ -55,7 +55,7 @@ export default function AboutPage() {
             About Mediavoxer
           </div>
           <h1 className="text-4xl font-bold tracking-[-0.04em] text-slate-900 sm:text-5xl lg:text-6xl mb-6">
-            Professional press release distribution for the modern era
+            Professional Release Media distribution for the modern era
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-8">
             We're transforming how organizations share their news with the world. Our platform connects 
@@ -81,7 +81,7 @@ export default function AboutPage() {
               Building the future of media distribution
             </h2>
             <p className="text-slate-600 leading-7 mb-4">
-              Founded in 2020, Mediavoxer emerged from a simple observation: traditional press release 
+              Founded in 2020, Mediavoxer emerged from a simple observation: traditional Release Media 
               distribution was broken. Companies struggled to reach the right journalists, and media 
               professionals were overwhelmed with irrelevant pitches.
             </p>
@@ -147,7 +147,7 @@ export default function AboutPage() {
             Ready to amplify your message?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of organizations that trust Mediavoxer for their press release distribution needs
+            Join thousands of organizations that trust Mediavoxer for their Release Media distribution needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" asChild className="border-slate-200 text-slate-700 hover:bg-slate-50 rounded-full">

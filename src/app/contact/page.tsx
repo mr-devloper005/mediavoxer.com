@@ -1,4 +1,4 @@
-import { Mail, Send } from 'lucide-react'
+﻿import { Mail, Send } from 'lucide-react'
 import { NavbarShell } from '@/components/shared/navbar-shell'
 import { Footer } from '@/components/shared/footer'
 import { SITE_CONFIG } from '@/lib/site-config'
@@ -26,7 +26,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-xl leading-relaxed text-slate-600 max-w-3xl mx-auto">
-              Have questions about our press release distribution services? 
+              Have questions about our Release Media distribution services? 
               Our team is here to help you amplify your brand story.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-slate-600 mb-8">
-                  We're here to help with your press release distribution needs. 
+                  We're here to help with your Release Media distribution needs. 
                   Reach out to us through any of the following channels.
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     className="w-full h-12 rounded-xl border border-slate-200 bg-white px-4 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                   >
                     <option value="">Select a topic</option>
-                    <option value="distribution">Press Release Distribution</option>
+                    <option value="distribution">Release Media Distribution</option>
                     <option value="partnerships">Media Partnerships</option>
                     <option value="support">Technical Support</option>
                     <option value="billing">Billing & Pricing</option>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                     name="message"
                     rows={6}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                    placeholder="Tell us how we can help with your press release distribution needs..."
+                    placeholder="Tell us how we can help with your Release Media distribution needs..."
                   />
                 </div>
 
