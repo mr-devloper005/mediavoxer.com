@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Search, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { SITE_CONFIG } from '@/lib/site-config'
-import { siteContent } from '@/config/site.content'
 import { cn } from '@/lib/utils'
 
 export const NAVBAR_OVERRIDE_ENABLED = true
@@ -14,7 +12,6 @@ export const NAVBAR_OVERRIDE_ENABLED = true
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Latest News', href: '/updates' },
-  { label: 'Pricing', href: '/pricing' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -27,19 +24,13 @@ export function NavbarOverride() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
       <nav className="mx-auto flex h-[68px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
 
-        {/* Logo + name + tagline */}
+        {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center whitespace-nowrap">
-          <div className="hidden sm:block">
-            <span className="block text-[15px] font-bold leading-tight text-gray-900">
-              {SITE_CONFIG.name}
-            </span>
-            <span className="block text-[9px] uppercase tracking-[0.22em] text-gray-400">
-              {siteContent.navbar.tagline}
-            </span>
-          </div>
-          <span className="block text-[15px] font-bold leading-tight text-gray-900 sm:hidden">
-            {SITE_CONFIG.name}
-          </span>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Center nav links */}

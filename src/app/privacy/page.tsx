@@ -6,7 +6,7 @@ import { Shield, Database, Eye, Settings, Lock, UserCheck } from "lucide-react";
 const sections = [
   { 
     title: 'Data We Collect', 
-    body: 'Account information, usage analytics, and content you submit. We collect only what\'s necessary to provide our press release distribution services.',
+    body: 'Account information, usage analytics, and content you submit. We collect only what\'s necessary to provide our Release Media distribution services.',
     icon: Database
   },
   { 
@@ -21,12 +21,12 @@ const sections = [
   },
   {
     title: 'Data Protection',
-    body: 'We use industry-standard encryption and security measures to protect your press releases and personal information from unauthorized access.',
+    body: 'We use industry-standard encryption and security measures to protect your Release Media and personal information from unauthorized access.',
     icon: Lock
   },
   {
     title: 'Third-Party Sharing',
-    body: 'We only share your press releases with verified media outlets and journalists you authorize. We never sell your personal information to third parties.',
+    body: 'We only share your Release Media with verified media outlets and journalists you authorize. We never sell your personal information to third parties.',
     icon: UserCheck
   }
 ];
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-8">
-            How we collect, use, and protect your information. Your privacy is fundamental to our press release distribution platform.
+            How we collect, use, and protect your information. Your privacy is fundamental to our Release Media distribution platform.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
           <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Security Measures</h3>
             <p className="text-slate-600 mb-6">
-              We implement industry-standard security protocols to protect your press releases and personal information.
+              We implement industry-standard security protocols to protect your Release Media and personal information.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">

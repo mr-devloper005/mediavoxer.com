@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 import Link from 'next/link'
 
@@ -547,7 +547,7 @@ function EditorialHome({
               <div className="text-left">
                 <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600 mb-8">
                   <FileText className="h-4 w-4" />
-                  Global Press Release Distribution
+                  Global Release Media Distribution
                 </div>
                 <h1 className="font-sans text-5xl font-black leading-[1.1] tracking-tight text-slate-900 sm:text-6xl lg:text-7xl mb-8">
                   Amplify Your
@@ -558,7 +558,7 @@ function EditorialHome({
                 </h1>
                 <p className="text-xl leading-relaxed text-slate-600 mb-10 max-w-2xl">
                   Connect with thousands of journalists and media outlets worldwide. 
-                  Professional press release distribution that delivers results.
+                  Professional Release Media distribution that delivers results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -568,12 +568,6 @@ function EditorialHome({
                     Start Distribution
                     <ArrowRight className="h-5 w-5" />
                   </Link>
-                  <Link
-                    href="/pricing"
-                    className="inline-flex items-center gap-2 rounded-xl border-2 border-slate-200 bg-white px-8 py-4 text-slate-700 font-bold hover:border-slate-300 hover:bg-slate-50 transition-all"
-                  >
-                    View Plans
-                  </Link>
                 </div>
               </div>
               <div className="relative">
@@ -581,7 +575,7 @@ function EditorialHome({
                   <div className="grid gap-8">
                     <div className="text-center">
                       <div className="text-4xl font-black text-blue-600 mb-2">50K+</div>
-                      <div className="text-sm font-medium text-slate-600">Press Releases</div>
+                      <div className="text-sm font-medium text-slate-600">Release Media</div>
                     </div>
                     <div className="text-center">
                       <div className="text-4xl font-black text-indigo-600 mb-2">2.5K+</div>
@@ -609,7 +603,7 @@ function EditorialHome({
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive press release distribution solutions tailored to your needs
+              Comprehensive Release Media distribution solutions tailored to your needs
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
@@ -619,7 +613,7 @@ function EditorialHome({
               </div>
               <h3 className="font-sans text-2xl font-bold text-slate-900 mb-4">Global Reach</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Distribute your press releases to thousands of media outlets worldwide with our global network.
+                Distribute your Release Media to thousands of media outlets worldwide with our global network.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
                 Learn More
@@ -645,7 +639,7 @@ function EditorialHome({
               </div>
               <h3 className="font-sans text-2xl font-bold text-slate-900 mb-4">Analytics & Insights</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Track your press release performance with detailed analytics and real-time insights.
+                Track your Release Media performance with detailed analytics and real-time insights.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700">
                 Learn More
@@ -656,7 +650,7 @@ function EditorialHome({
           </div>
         </section>
 
-        {/* Featured Press Release - Redesigned */}
+        {/* Featured Release Media - Redesigned */}
         {lead ? (
           <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-24 lg:py-32">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -680,7 +674,7 @@ function EditorialHome({
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-6">
                       <span className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white">
-                        Press Release
+                        Release Media
                       </span>
                       <span className="text-sm font-medium text-slate-500">
                         {lead.publishedAt ? new Date(lead.publishedAt).toLocaleDateString() : ''}
@@ -709,7 +703,7 @@ function EditorialHome({
           </section>
         ) : null}
 
-        {/* Recent Press Releases - New Grid Layout */}
+        {/* Recent Release Media - New Grid Layout */}
         {spotlightPosts.length ? (
           <section className="bg-white py-20 sm:py-24 lg:py-32">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -733,10 +727,7 @@ function EditorialHome({
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-white">
-                      Press Release
-                    </span>
-                    <span className="text-sm font-medium text-slate-500">
-                      {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''}
+                      Release Media
                     </span>
                   </div>
                   <h3 className="font-sans text-xl font-bold leading-tight text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
@@ -767,7 +758,7 @@ function EditorialHome({
               </span>
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Join thousands of organizations that trust Mediavoxer for their press release distribution
+              Join thousands of organizations that trust Mediavoxer for their Release Media distribution
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -799,7 +790,7 @@ function EditorialHome({
               Ready to Amplify Your Message?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-12">
-              Start distributing your press releases today and reach millions of readers worldwide
+              Start distributing your Release Media today and reach millions of readers worldwide
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
