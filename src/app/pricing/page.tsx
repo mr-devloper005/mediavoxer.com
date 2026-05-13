@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Check, Star, ArrowRight, HelpCircle, Mail } from 'lucide-react'
 import { NavbarShell } from '@/components/shared/navbar-shell'
@@ -9,8 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     path: '/pricing',
     title: 'Pricing Plans - Mediavoxer',
-    description: 'Choose the perfect press release distribution plan for your organization. Professional media distribution with global reach.',
-    keywords: ['press release pricing', 'media distribution plans', 'public relations pricing'],
+    description: 'Choose the perfect Release Media distribution plan for your organization. Professional media distribution with global reach.',
+    keywords: ['Release Media pricing', 'media distribution plans', 'public relations pricing'],
   })
 }
 
@@ -21,9 +21,9 @@ const pricingPlans = [
     price: '$99',
     period: 'per month',
     features: [
-      'Up to 5 press releases per month',
+      'Up to 5 Release Media per month',
       'Basic media distribution',
-      'Standard press release template',
+      'Standard Release Media template',
       'Email support',
       '7-day archive access',
       'Basic analytics dashboard',
@@ -45,9 +45,9 @@ const pricingPlans = [
     price: '$299',
     period: 'per month',
     features: [
-      'Up to 20 press releases per month',
+      'Up to 20 Release Media per month',
       'Priority media distribution',
-      'Custom press release templates',
+      'Custom Release Media templates',
       'Priority email & phone support',
       '30-day archive access',
       'Advanced analytics & insights',
@@ -70,7 +70,7 @@ const pricingPlans = [
     price: 'Custom',
     period: 'contact us',
     features: [
-      'Unlimited press releases',
+      'Unlimited Release Media',
       'Premium media distribution',
       'Fully custom templates',
       '24/7 dedicated support',
@@ -100,14 +100,14 @@ const addOns = [
   },
   {
     name: 'Analytics Pro',
-    description: 'Advanced analytics and reporting for your press releases',
+    description: 'Advanced analytics and reporting for your Release Media',
     price: '$79',
     period: 'per month',
     features: ['Real-time tracking', 'Sentiment analysis', 'Competitor insights', 'Custom reports'],
   },
   {
     name: 'Social Amplification',
-    description: 'Amplify your press releases across social media platforms',
+    description: 'Amplify your Release Media across social media platforms',
     price: '$99',
     period: 'per month',
     features: ['Multi-platform posting', 'Social analytics', 'Content optimization', 'Scheduling tools'],
@@ -117,7 +117,7 @@ const addOns = [
 const faqs = [
   {
     question: 'What is included in the media distribution?',
-    answer: 'Our media distribution includes delivery to thousands of journalists, news websites, bloggers, and media outlets. We cover major news wires, industry-specific publications, and regional media outlets to ensure maximum reach for your press releases.',
+    answer: 'Our media distribution includes delivery to thousands of journalists, news websites, bloggers, and media outlets. We cover major news wires, industry-specific publications, and regional media outlets to ensure maximum reach for your Release Media.',
   },
   {
     question: 'Can I change my plan anytime?',
@@ -137,7 +137,7 @@ const faqs = [
   },
   {
     question: 'Do you provide writing services?',
-    answer: "While we don't include press release writing in our standard plans, we can connect you with professional writers through our Enterprise plan or as an add-on service. Contact us for more information.",
+    answer: "While we don't include Release Media writing in our standard plans, we can connect you with professional writers through our Enterprise plan or as an add-on service. Contact us for more information.",
   },
 ]
 
@@ -252,7 +252,7 @@ export default function PricingPage() {
                 </span>
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                Add powerful features to your press release distribution with our premium add-ons
+                Add powerful features to your Release Media distribution with our premium add-ons
               </p>
             </div>
 
@@ -323,7 +323,7 @@ export default function PricingPage() {
           <div className="mx-auto max-w-7xl">
             <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-12 text-center shadow-2xl">
               <h2 className="mb-4 text-3xl font-black text-white sm:text-4xl">
-                Ready to distribute your press releases?
+                Ready to distribute your Release Media?
               </h2>
               <p className="mx-auto mb-8 max-w-2xl text-lg text-blue-100">
                 Join thousands of organizations that trust Mediavoxer for their media distribution needs

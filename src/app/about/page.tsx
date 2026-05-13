@@ -1,21 +1,20 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { NavbarShell } from "@/components/shared/navbar-shell";
 import { Footer } from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { Globe, Users, FileText, TrendingUp, Award, Target } from "lucide-react";
 
 const highlights = [
-  { label: "Press Releases Distributed", value: "50k+" },
+  { label: "Release Media Distributed", value: "50k+" },
   { label: "Media Partners", value: "2,500+" },
   { label: "Companies Served", value: "12k+" },
 ];
 
 const values = [
-  { title: "Professional Distribution", description: "We connect your press releases with thousands of journalists and media outlets worldwide.", icon: Globe },
-  { title: "Media Expertise", description: "Our team understands the media landscape and helps craft compelling press releases that get noticed.", icon: FileText },
+  { title: "Professional Distribution", description: "We connect your Release Media with thousands of journalists and media outlets worldwide.", icon: Globe },
+  { title: "Media Expertise", description: "Our team understands the media landscape and helps craft compelling Release Media that get noticed.", icon: FileText },
   { title: "Global Reach", description: "From local news to international media, we ensure your story reaches the right audience.", icon: Target },
 ];
 
@@ -25,7 +24,6 @@ const teamMembers = [
     name: "Sarah Chen",
     role: "CEO & Founder",
     bio: "Former PR executive with 15+ years in media distribution and communications.",
-    avatar: "/placeholder.svg?height=100&width=100&text=SC",
     location: "New York, NY"
   },
   {
@@ -33,15 +31,13 @@ const teamMembers = [
     name: "Michael Rodriguez",
     role: "Head of Media Relations",
     bio: "Experienced journalist turned media strategist with deep industry connections.",
-    avatar: "/placeholder.svg?height=100&width=100&text=MR",
     location: "Los Angeles, CA"
   },
   {
     id: 3,
     name: "Emily Watson",
     role: "Director of Operations",
-    bio: "Operations expert focused on scaling press release distribution and client success.",
-    avatar: "/placeholder.svg?height=100&width=100&text=EW",
+    bio: "Operations expert focused on scaling Release Media distribution and client success.",
     location: "Chicago, IL"
   }
 ];
@@ -59,7 +55,7 @@ export default function AboutPage() {
             About Mediavoxer
           </div>
           <h1 className="text-4xl font-bold tracking-[-0.04em] text-slate-900 sm:text-5xl lg:text-6xl mb-6">
-            Professional press release distribution for the modern era
+            Professional Release Media distribution for the modern era
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-8">
             We're transforming how organizations share their news with the world. Our platform connects 
@@ -85,7 +81,7 @@ export default function AboutPage() {
               Building the future of media distribution
             </h2>
             <p className="text-slate-600 leading-7 mb-4">
-              Founded in 2020, Mediavoxer emerged from a simple observation: traditional press release 
+              Founded in 2020, Mediavoxer emerged from a simple observation: traditional Release Media 
               distribution was broken. Companies struggled to reach the right journalists, and media 
               professionals were overwhelmed with irrelevant pitches.
             </p>
@@ -123,15 +119,16 @@ export default function AboutPage() {
           </div>
           
           <div className="grid gap-6 md:grid-cols-3">
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, i) => (
               <div key={member.id} className="rounded-2xl border border-slate-200 bg-white p-6 transition-transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
                 <div className="flex items-center gap-4 mb-4">
-                  <Avatar className="h-16 w-16">
-                    <AvatarImage src={member.avatar} alt={member.name} />
-                    <AvatarFallback className="bg-blue-100 text-blue-600 font-semibold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
+                  <div className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white ${
+                    i === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                    i === 1 ? 'bg-gradient-to-br from-indigo-500 to-purple-600' :
+                    'bg-gradient-to-br from-purple-500 to-pink-600'
+                  }`}>
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900">{member.name}</h3>
                     <p className="text-sm text-slate-600">{member.role}</p>
@@ -150,14 +147,9 @@ export default function AboutPage() {
             Ready to amplify your message?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of organizations that trust Mediavoxer for their press release distribution needs
+            Join thousands of organizations that trust Mediavoxer for their Release Media distribution needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg">
-              <Link href="/pricing">
-                View Pricing Plans
-              </Link>
-            </Button>
             <Button variant="outline" asChild className="border-slate-200 text-slate-700 hover:bg-slate-50 rounded-full">
               <Link href="/contact">
                 Contact Our Team

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { NavbarShell } from "@/components/shared/navbar-shell";
 import { Footer } from "@/components/shared/footer";
 import { SITE_CONFIG } from "@/lib/site-config";
@@ -12,17 +12,17 @@ const sections = [
   },
   {
     title: "Content Ownership",
-    body: "You own the content you publish and grant the platform a license to display it. This includes press releases, media assets, and other materials you share through our service.",
+    body: "You own the content you publish and grant the platform a license to display it. This includes Release Media, media assets, and other materials you share through our service.",
     icon: FileText
   },
   { 
     title: "Acceptable Use", 
-    body: "No spam, harassment, or illegal content. All press releases must be factual, professional, and comply with applicable laws and regulations.",
+    body: "No spam, harassment, or illegal content. All Release Media must be factual, professional, and comply with applicable laws and regulations.",
     icon: AlertCircle
   },
   {
     title: "Service Terms",
-    body: "Our press release distribution services are provided on a subscription basis. Payment terms and service level agreements are outlined in your specific plan.",
+    body: "Our Release Media distribution services are provided on a subscription basis. Payment terms and service level agreements are outlined in your specific plan.",
     icon: Users
   }
 ];
@@ -43,7 +43,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-8">
-            The rules and guidelines for using {SITE_CONFIG.name}. Please read these terms carefully before using our press release distribution platform.
+            The rules and guidelines for using {SITE_CONFIG.name}. Please read these terms carefully before using our Release Media distribution platform.
           </p>
         </div>
 
