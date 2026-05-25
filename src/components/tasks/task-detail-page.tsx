@@ -273,7 +273,6 @@ export async function TaskDetailPage({ task, slug }: { task: TaskKey; slug: stri
                 </h1>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-600">
                   <span>By {articleAuthor}</span>
-                  {articleDate ? <span>{articleDate}</span> : null}
                   <Badge variant="secondary" className="inline-flex items-center gap-1 bg-blue-100 text-blue-600 border-blue-200">
                     <Tag className="h-3.5 w-3.5" />
                     {category}

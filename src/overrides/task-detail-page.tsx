@@ -95,12 +95,6 @@ export async function TaskDetailPageOverride({ slug }: { task: TaskKey; slug: st
               {post.title}
             </h1>
 
-            {date ? (
-              <div className="mt-5 text-sm text-muted-foreground">
-                <span>{date}</span>
-              </div>
-            ) : null}
-
             <div className="mt-6 flex flex-wrap gap-2">
               <a
                 href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`}
